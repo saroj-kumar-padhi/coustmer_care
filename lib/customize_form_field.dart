@@ -121,16 +121,17 @@ class CustomContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){
-        Get.to(()=>Seven());
+      onTap: () {
+        Get.to(() => Seven());
         //pc wala
-        //bottom  
+        //bottom
       },
       child: Container(
         width: MediaQuery.of(context).size.width * 0.5,
         // height: MediaQuery.of(context).size.height * 0.22,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5.0), // Border radius as per design
+          borderRadius:
+              BorderRadius.circular(5.0), // Border radius as per design
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

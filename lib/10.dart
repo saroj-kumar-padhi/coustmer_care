@@ -4,8 +4,6 @@ import 'package:get/get.dart';
 import 'package:hello/12.dart';
 import 'package:hello/7-1.dart';
 
-
-
 Color blue = const Color.fromARGB(255, 46, 51, 135);
 
 class Ten extends StatelessWidget {
@@ -258,7 +256,8 @@ class Ten extends StatelessWidget {
       ),
     );
   }
-showdialog(BuildContext context) {
+
+  showdialog(BuildContext context) {
     return showDialog(
       context: context,
       builder: (context) {
@@ -266,7 +265,7 @@ showdialog(BuildContext context) {
           // insetPadding: const EdgeInsets.symmetric(horizontal: 40),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
           contentPadding:
-          const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+              const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
           children: [
             SizedBox(
               height: 230,
@@ -283,11 +282,13 @@ showdialog(BuildContext context) {
                     children: [
                       Text(
                         'Booking Confirmed',
-                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.w600),
                       ),
                       Gap(8),
                       Text(
-                        'Your booking has been successfully confirmed',textAlign: TextAlign.center,
+                        'Your booking has been successfully confirmed',
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
@@ -301,9 +302,9 @@ showdialog(BuildContext context) {
                     decoration: BoxDecoration(
                         color: themeColor,
                         borderRadius: BorderRadius.circular(8)),
-                    child:  InkWell(
+                    child: InkWell(
                       onTap: () {
-                        Get.to(()=>BookingHistory());
+                        Get.to(() => BookingHistory());
                       },
                       child: Center(
                         child: Text(
@@ -324,5 +325,4 @@ showdialog(BuildContext context) {
       },
     );
   }
-  
 }

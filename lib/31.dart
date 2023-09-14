@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class RideReached extends StatelessWidget {
-  const RideReached({Key? key}) : super(key: key);
+class ConfirmAprroval extends StatelessWidget {
+  const ConfirmAprroval({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -199,45 +199,77 @@ class RideReached extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 30,
-                    ),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.turn_right_sharp,
-                          color: Color.fromRGBO(68, 109, 222, 1),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 5),
-                          child: Text(
-                            "Get Directions",
-                            style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w600,
-                                color: Color.fromRGBO(68, 109, 222, 1)),
-                          ),
-                        ),
-                        Spacer(),
-                        Image.asset("lib/assest/Group 5350.png"),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Image.asset("lib/assest/Group 5348.png"),
-                        )
-                      ],
-                    ),
-                    SizedBox(
                       height: 20,
-                    )
+                    ),
+
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15),
+                      child: Text("Invoice List",style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.w400),),
+                    ),
+
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(15,5,10,10),
+                      child: Row(
+                        children: [
+                         Text("Visiting Cost",style: TextStyle(
+                                fontSize: 12, fontWeight: FontWeight.w400),),
+                                Spacer(),
+                                Text("₹199",style: TextStyle(
+                                fontSize: 12, fontWeight: FontWeight.w500),),
+                        ],
+                      ),
+
+                      
+                    ),
+               
+
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Image.asset("lib/assest/Vector 198.png"),
+                    ),
+
+
+
+
+  Padding(
+    padding: const EdgeInsets.fromLTRB(15,10,10,10),
+    child: Row(
+        children: [
+           Text("Total Cost",style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.w700),),
+                                  Spacer(),
+                                  Text("₹250",style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.w500),),
+
+                                 
+        ],
+      ),
+  ),
+
+
+
+
+                   
+                  
                   ],
                 ),
               ),
             ],
           ),
+
           Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.fromLTRB(20,20,0,0),
+            child: Align(
+              alignment: Alignment.bottomLeft,
+              child: Text("Collect Cash and then Press the button below",
+              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.w400,color: Color.fromRGBO(237, 90, 44, 1))
+              )),
+          ),
+          
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20,100,20,20),
             child: MaterialButton(
               height: 40,
               color: Color.fromARGB(255, 4, 6, 147),
@@ -247,13 +279,73 @@ class RideReached extends StatelessWidget {
               ),
               onPressed: () {},
               child: Text(
-                'Reached your place',
+                'Confirm > >',
                 style: TextStyle(color: Colors.white),
               ),
             ),
-          )
+          ),
+          
         ],
       ),
+        bottomNavigationBar: BottomNavigationBar(
+          unselectedItemColor: Colors.black,
+  selectedItemColor: Colors.black,
+          onTap: (int index) {
+            // Handle item tap here
+          },
+          items: const [
+            BottomNavigationBarItem(
+        
+              icon: Image(
+                image: AssetImage('lib/assest/document.png'),
+                height: 20,
+                width: 20,
+              ),
+              label: "",
+            ),
+            BottomNavigationBarItem(
+              icon: Image(
+                image: AssetImage('lib/assest/refresh.png'),
+                height: 20,
+                width: 20,
+              ),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Image(
+                image: AssetImage('lib/assest/gps.png'),
+                height: 20,
+                width: 20,
+              ),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Image(
+                image: AssetImage('lib/assest/usdcoin.png'),
+                height: 20,
+                width: 20,
+              ),
+              label: '',
+            ),
+          ],
+        ),
     );
   }
 }
+
+
+
+//  Row(
+//   children: [
+//     Padding(padding: EdgeInsets.only(left: 10),
+//     child: Row(
+//       children: [
+//          Text("Total Cost",style: TextStyle(
+//                                 fontSize: 12, fontWeight: FontWeight.w400),),
+//                                 Spacer(),
+//                                 Text("₹199",style: TextStyle(
+//                                 fontSize: 12, fontWeight: FontWeight.w500),),
+//       ],
+//     ),)
+//   ],
+//  )

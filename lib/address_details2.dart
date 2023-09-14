@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:hello/customize_form_field.dart';
 import 'package:hello/preview_details.dart';
 
-
 class AddressDetails2 extends StatelessWidget {
   const AddressDetails2({super.key});
 
@@ -258,10 +257,10 @@ class AddressDetails2 extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 19, right: 19, top: 4),
             child: InkWell(
-              onTap: (){
-                Get.to(()=>PreviewDetails());
-              },
-              child: CustomButton(text1: 'Next')),
+                onTap: () {
+                  Get.to(() => PreviewDetails());
+                },
+                child: CustomButton(text1: 'Next')),
           ),
         ])));
   }

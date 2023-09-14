@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+
 Color themeColor = const Color.fromARGB(255, 64, 68, 143);
 Color lightBlue = const Color.fromARGB(255, 206, 240, 255);
+
 class SevenOne extends StatefulWidget {
-   const SevenOne({Key? key}) : super(key: key);
+  const SevenOne({Key? key}) : super(key: key);
 
   @override
   State<SevenOne> createState() => _SevenOneState();
 }
 
 class _SevenOneState extends State<SevenOne> {
-int selectedIndex =10;
+  int selectedIndex = 10;
 
   @override
   Widget build(BuildContext context) {
@@ -91,54 +93,66 @@ int selectedIndex =10;
                         ),
                       ),
                       Positioned(
-                        top: 0,right: 0,
+                        top: 0,
+                        right: 0,
                         child: Radio(
                           activeColor: themeColor,
-                          value: index, groupValue: selectedIndex, onChanged: (value) {
-                          setState(() {
-                            selectedIndex = value!;
-                          });
-                        },),
+                          value: index,
+                          groupValue: selectedIndex,
+                          onChanged: (value) {
+                            setState(() {
+                              selectedIndex = value!;
+                            });
+                          },
+                        ),
                       )
                     ],
                   ),
                 );
-                
               },
             ),
-            
-             Container(
-               width: MediaQuery.of(context).size.width,
-               height: 40,
-               decoration:BoxDecoration(color: lightBlue,borderRadius: BorderRadius.circular(8)),
-               child:  Center(
-                 child: Row(mainAxisAlignment: MainAxisAlignment.center,
-                   children: [
-                     Icon(Icons.add,color: themeColor,),
-                     Text(
-                       'Add new address',
-                       style: TextStyle(
-                           color: themeColor, fontSize: 14, fontWeight: FontWeight.w600),
-                     ),
-                   ],
-                 ),
-               ),
-             ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 40,
+              decoration: BoxDecoration(
+                  color: lightBlue, borderRadius: BorderRadius.circular(8)),
+              child: Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.add,
+                      color: themeColor,
+                    ),
+                    Text(
+                      'Add new address',
+                      style: TextStyle(
+                          color: themeColor,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
-       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25),
         child: Container(
           width: MediaQuery.of(context).size.width,
           height: 40,
-          decoration:BoxDecoration(color: themeColor,borderRadius: BorderRadius.circular(8)),
+          decoration: BoxDecoration(
+              color: themeColor, borderRadius: BorderRadius.circular(8)),
           child: const Center(
             child: Text(
               'Next',
               style: TextStyle(
-                  color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600),
+                  color: Colors.white,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600),
             ),
           ),
         ),

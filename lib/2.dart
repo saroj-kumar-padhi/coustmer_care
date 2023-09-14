@@ -42,36 +42,42 @@ class Two extends StatelessWidget {
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
               ),
             ),
-             Padding(
-               padding: const EdgeInsets.symmetric(vertical: 10),
-               child: Pinput(
-               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-               
-               defaultPinTheme: PinTheme(
-                height: 60,width: 65,
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(8),
-                color: Colors.white,
-                boxShadow: const [BoxShadow(blurRadius: 10,color: Colors.black26)])),
-                         ),
-             ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: Pinput(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                defaultPinTheme: PinTheme(
+                    height: 60,
+                    width: 65,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        color: Colors.white,
+                        boxShadow: const [
+                          BoxShadow(blurRadius: 10, color: Colors.black26)
+                        ])),
+              ),
+            ),
             const Gap(30),
-             InkWell(
-              onTap: (){
-                Get.to(()=>ProfilePage());
+            InkWell(
+              onTap: () {
+                Get.to(() => ProfilePage());
               },
-               child: Container(
-                 width: MediaQuery.of(context).size.width,
-                 height: 40,
-                 decoration:BoxDecoration(color: themeColor,borderRadius: BorderRadius.circular(8)),
-                 child: const Center(
-                   child: Text(
-                     'Confirm',
-                     style: TextStyle(
-                         color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600),
-                   ),
-                 ),
-               ),
-             ),
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: 40,
+                decoration: BoxDecoration(
+                    color: themeColor, borderRadius: BorderRadius.circular(8)),
+                child: const Center(
+                  child: Text(
+                    'Confirm',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),

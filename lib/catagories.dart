@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello/customize_form_field.dart';
 
-
 class CatagoriesPage extends StatelessWidget {
   const CatagoriesPage({super.key});
 

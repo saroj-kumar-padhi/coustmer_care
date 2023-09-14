@@ -4,8 +4,6 @@ import 'package:get/get.dart';
 import 'package:hello/catagories.dart';
 import 'package:hello/customize_form_field.dart';
 
-
-
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
 
@@ -145,10 +143,10 @@ class _ProfilePageState extends State<ProfilePage> {
               height: MediaQuery.of(context).size.height * 0.3,
             ),
             InkWell(
-              onTap: (){
-                Get.to(()=>CatagoriesPage());
-                //home page to be navigate 
-                //caterious 
+              onTap: () {
+                Get.to(() => CatagoriesPage());
+                //home page to be navigate
+                //caterious
               },
               child: Center(
                   child: CustomButton(

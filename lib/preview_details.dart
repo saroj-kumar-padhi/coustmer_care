@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:hello/10.dart';
 import 'package:hello/customize_form_field.dart';
 
-
 class PreviewDetails extends StatelessWidget {
   const PreviewDetails({super.key});
 
@@ -86,10 +85,10 @@ class PreviewDetails extends StatelessWidget {
                   right: 20,
                 ),
                 child: InkWell(
-                  onTap: (){
-                    Get.to(()=>Ten());
-                  },
-                  child: CustomButton(text1: 'Next')),
+                    onTap: () {
+                      Get.to(() => Ten());
+                    },
+                    child: CustomButton(text1: 'Next')),
               ),
             ),
           ]),

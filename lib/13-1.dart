@@ -146,38 +146,42 @@ class BookingHistoryAccepted extends StatelessWidget {
                                         fontWeight: FontWeight.w600,
                                         fontSize: 12),
                                   ),
-                                 
-                                  
                                 ],
-                               
                               ),
-                             
                             ],
                           )
                         ],
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 10),
-                        child: Image(image: AssetImage("lib/assest/Vector 198.png")),
+                        child: Image(
+                            image: AssetImage("lib/assest/Vector 198.png")),
                       ),
-                              
-                               Align(
-                                alignment: Alignment.centerLeft,
-                                 child: Row(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 10),
-                                      child: Align(
-                                        alignment: Alignment.centerLeft,
-                                        child: Text("Technician: Mridush Voyal",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400),)),
-                                    ),
-                                      Spacer(),
-                                      IconButton(onPressed: (){}, icon: Image.asset("lib/assest/message.png")),
-                                      IconButton(onPressed: (){}, icon: Image.asset("lib/assest/mobile.png")),
-                               
-                                  ],
-                                 ),
-                               )
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    "Technician: Mridush Voyal",
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400),
+                                  )),
+                            ),
+                            Spacer(),
+                            IconButton(
+                                onPressed: () {},
+                                icon: Image.asset("lib/assest/message.png")),
+                            IconButton(
+                                onPressed: () {},
+                                icon: Image.asset("lib/assest/mobile.png")),
+                          ],
+                        ),
+                      )
                     ],
                   ),
                 ),

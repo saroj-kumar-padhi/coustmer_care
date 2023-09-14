@@ -31,7 +31,7 @@ class _SevenState extends State<Seven> {
             Row(
               children: [
                 Container(
-                  height: 24,width: 24,
+                  height: 24, width: 24,
                   // padding: const EdgeInsets.all(3),
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
@@ -63,14 +63,13 @@ class _SevenState extends State<Seven> {
                     ]),
                 child: CalendarDatePicker2(
                     config: CalendarDatePicker2Config(
-
-                      selectedDayHighlightColor: themeColor
-                    ), value: const []),
+                        selectedDayHighlightColor: themeColor),
+                    value: const []),
               ),
             ),
             const Text(
               'Choose Time',
-              style: TextStyle(fontSize: 14,fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
             ),
             const Gap(20),
             GridView.builder(
@@ -102,7 +101,11 @@ class _SevenState extends State<Seven> {
                         ]),
                     padding:
                         const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                    child: Center(child: Text(time[index],style: TextStyle(fontSize: 10),)),
+                    child: Center(
+                        child: Text(
+                      time[index],
+                      style: TextStyle(fontSize: 10),
+                    )),
                   ),
                 );
               },
@@ -114,18 +117,21 @@ class _SevenState extends State<Seven> {
       floatingActionButton: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25),
         child: InkWell(
-          onTap: (){
-            Get.to(()=>AddressDetails1());
+          onTap: () {
+            Get.to(() => AddressDetails1());
           },
           child: Container(
             width: MediaQuery.of(context).size.width,
             height: 40,
-            decoration:BoxDecoration(color: themeColor,borderRadius: BorderRadius.circular(8)),
+            decoration: BoxDecoration(
+                color: themeColor, borderRadius: BorderRadius.circular(8)),
             child: const Center(
               child: Text(
                 'Next',
                 style: TextStyle(
-                    color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600),
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600),
               ),
             ),
           ),
