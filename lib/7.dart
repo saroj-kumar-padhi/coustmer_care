@@ -46,7 +46,7 @@ class _SevenState extends State<Seven> {
                   'When would you like your services',
                   style: TextStyle(
                       color: Colors.black,
-                      fontSize: 16,
+                      fontSize: 15,
                       fontWeight: FontWeight.w700),
                 )
               ],

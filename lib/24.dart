@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/get_navigation.dart';
-import 'package:hello/23.dart';
-import 'package:hello/28.dart';
+import 'package:hello/booking_history.dart';
+import 'package:hello/customize_form_field.dart';
+import 'package:hello/widgets/approval.dart';
+import 'package:hello/widgets/request_tab_bar.dart';
 
-class RideProceed extends StatelessWidget {
-  const RideProceed({Key? key}) : super(key: key);
+class RideRequest24 extends StatelessWidget {
+  const RideRequest24({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(height: 25),
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 10),
+                padding: const EdgeInsets.only(left: 13, top: 30),
                 child: Text(
                   "Hi, Ramesh",
                   style: TextStyle(
@@ -34,16 +34,22 @@ class RideProceed extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 10),
+            padding: const EdgeInsets.only(left: 10, top: 10),
             child: Row(
               children: [
-                Image.asset("lib/assest/Group 5417.png"),
-                Text(
-                  "O",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 5),
+                  padding: const EdgeInsets.all(4.0),
+                  child: Image.asset("lib/assest/Group 5417.png"),
+                ),
+                const Padding(
+                  padding: EdgeInsets.all(4.0),
+                  child: Text(
+                    "O",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(left: 5),
                   child: Text(
                     "credits",
                     style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
@@ -62,53 +68,72 @@ class RideProceed extends StatelessWidget {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 10),
+          const Padding(
+            padding: EdgeInsets.only(left: 10, top: 10),
             child: Align(
               alignment: Alignment.centerLeft,
               child: Text("Requests",
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600)),
             ),
           ),
-          DefaultTabController(
-            length: 5,
-            child: Column(
-              children: [
-                TabBar(
-                  isScrollable: true,
-                  tabs: [
-                    Tab(
-                        child: Text(
-                      'Requests',
-                      style: TextStyle(
-                          fontSize: 11, color: Color.fromRGBO(64, 68, 143, 1)),
-                    )),
-                    Tab(
-                        child: Text('Approvals',
-                            style: TextStyle(
-                                fontSize: 11,
-                                color: Color.fromRGBO(115, 114, 114, 1)))),
-                    Tab(
-                        child: Text('Ongoing',
-                            style: TextStyle(
-                                fontSize: 11,
-                                color: Color.fromRGBO(115, 114, 114, 1)))),
-                    Tab(
-                        child: Text('Complete',
-                            style: TextStyle(
-                                fontSize: 11,
-                                color: Color.fromRGBO(115, 114, 114, 1)))),
-                    Tab(
-                        child: Text('Cancelled',
-                            style: TextStyle(
-                                fontSize: 11,
-                                color: Color.fromRGBO(115, 114, 114, 1)))),
-                  ],
-                ),
-              ],
-            ),
+          const RequestTabBar(),
+          const Approvalpage(),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.2,
           ),
-          Column(
+          Padding(
+            padding: const EdgeInsets.only(left: 50, right: 50),
+            child: InkWell(
+                onTap: () {
+                  Get.to(BookingHistory1());
+                },
+                child: CustomButton(text1: "Send to customer > >")),
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.11,
+          ),
+          BottomNavigationBar(
+            onTap: (int index) {
+              // Handle item tap here
+            },
+            items: const [
+              BottomNavigationBarItem(
+                label: '',
+                icon: Image(
+                  image: AssetImage(
+                    'lib/assest/Group 5435.png',
+                  ),
+                  height: 35,
+                  width: 35,
+                ),
+              ),
+              BottomNavigationBarItem(
+                label: '',
+                icon: Image(
+                  image: AssetImage('lib/assest/Group 5434.png'),
+                  height: 35,
+                  width: 35,
+                ),
+              ),
+              BottomNavigationBarItem(
+                label: '',
+                icon: Image(
+                  image: AssetImage('lib/assest/Group 5433.png'),
+                  height: 35,
+                  width: 35,
+                ),
+              ),
+              BottomNavigationBarItem(
+                label: '',
+                icon: Image(
+                  image: AssetImage('lib/assest/Group 5432.png'),
+                  height: 35,
+                  width: 35,
+                ),
+              ),
+            ],
+          ),
+          /*  Column(
             children: [
               const SizedBox(
                 height: 15,
@@ -239,65 +264,7 @@ class RideProceed extends StatelessWidget {
                 ),
               ),
             ],
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(28, 20, 0, 0),
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "Enter OTP",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-            child: Material(
-              elevation: 4.0, // Adjust the elevation value as needed
-              borderRadius: BorderRadius.circular(
-                  10.0), // Adjust the value to control the roundness
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(
-                      10.0), // Adjust the value to control the roundness
-                  color: Colors.white, // Background color
-                ),
-                child: TextField(
-                  decoration: InputDecoration(
-                    suffix: Text(
-                      "Verify",
-                      style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.black),
-                    ),
-                    hintText: 'Enter 6 Digit Otp',
-                    contentPadding:
-                        EdgeInsets.all(10.0), // Optional: Adjust padding
-                    border: InputBorder.none, // Hide the default border
-                  ),
-                ),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: MaterialButton(
-              height: 40,
-              color: Color.fromARGB(255, 4, 6, 147),
-              minWidth: 300,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
-              ),
-              onPressed: () {
-                Get.to(() => BottomSheet23());
-              },
-              child: Text(
-                'Reached your place',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-          )
+          ),*/
         ],
       ),
     );
