@@ -87,7 +87,11 @@ class RideRequest24 extends StatelessWidget {
                 onTap: () {
                   Get.to(BookingHistory1());
                 },
-                child: CustomButton(text1: "Send to customer > >")),
+                child: InkWell(
+                  onTap: (){
+                    Get.to(Get.to(BookingHistory1()));
+                  },
+                  child: CustomButton(text1: "Send to customer > >"))),
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.11,

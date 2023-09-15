@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello/24.dart';
 import 'package:hello/controller/bottomsheet_con.dart';
 import 'package:hello/customize_form_field.dart';
 import 'package:hello/widgets/customize_form_field.dart';
@@ -148,10 +149,15 @@ class BottomSheet23 extends StatelessWidget {
                       color: Colors.white,
                       color1: Color.fromRGBO(46, 51, 135, 1),
                     ),
-                    CustomButton2(
-                      text1: "Confirm",
-                      color: Color.fromRGBO(46, 51, 135, 1),
-                      color1: Colors.white,
+                    InkWell(
+                      onTap: (){
+                        Get.to(RideRequest24());
+                      },
+                      child: CustomButton2(
+                        text1: "Confirm",
+                        color: Color.fromRGBO(46, 51, 135, 1),
+                        color1: Colors.white,
+                      ),
                     ),
                   ],
                 ),
