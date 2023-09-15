@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello/7.dart';
-import 'package:hello/pc.dart';
+import 'package:hello/24.dart';
 
 class CustomTextField extends StatelessWidget {
   final String hintText;
@@ -53,10 +52,7 @@ class CustomButton extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width * 7.5, // Width as per design
       height: MediaQuery.of(context).size.height * 0.06, // Height as per design
-      //  margin: const EdgeInsets.only(
-      //   top: 557.0118408203125, // Top position as per design
-      //   left: 150.012939453125, // Left position as per design
-      // ),
+
       decoration: BoxDecoration(
           borderRadius:
               BorderRadius.circular(8.0), // BorderRadius as per design
@@ -101,16 +97,8 @@ class CustomIconButton extends StatelessWidget {
             'lib/assest/arrowcircleleft2.png',
             width: 50,
             height: 50,
-            // Path to your custom icon image
-            //       width: MediaQuery.of(context).size.width * 0.004, // Width as per design
-            // height:
-            //     MediaQuery.of(context).size.height * 0.004,
-            // Height as per design
           ),
-          onPressed: () {
-            // Define the action to be taken when the button is pressed.
-            // You can add your custom logic here.
-          },
+          onPressed: () {},
         ));
 
     // Define the action to be taken when the button is pressed.
@@ -121,30 +109,22 @@ class CustomIconButton extends StatelessWidget {
 class CustomContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        Get.to(() => PcPage());
-        //pc wala
-        //bottom
-      },
-      child: Container(
-        width: MediaQuery.of(context).size.width * 0.5,
-        // height: MediaQuery.of(context).size.height * 0.22,
-        decoration: BoxDecoration(
-          borderRadius:
-              BorderRadius.circular(5.0), // Border radius as per design
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Image.asset(
-              'lib/assest/Frame 8.png',
-              fit: BoxFit.fill,
-              width: double.infinity,
-              //  height: double.infinity,
-            ),
-          ],
-        ),
+    return Container(
+      width: MediaQuery.of(context).size.width * 0.5,
+      // height: MediaQuery.of(context).size.height * 0.22,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5.0), // Border radius as per design
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Image.asset(
+            'assets/images/Frame 14.png',
+            fit: BoxFit.fill,
+            width: double.infinity,
+            //  height: double.infinity,
+          ),
+        ],
       ),
     );
 
@@ -350,5 +330,59 @@ class CustomTextEllipse extends StatelessWidget {
             color: Color.fromRGBO(
                 89, 83, 83, 1)) // You can adjust the weight as needed
         );
+  }
+}
+
+class CustomButton2 extends StatelessWidget {
+  final String text1;
+  final color;
+  final color1;
+  CustomButton2({
+    required this.text1,
+    required this.color,
+    required this.color1,
+  });
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        Get.to(RideRequest24());
+      },
+      child: Container(
+        width: MediaQuery.of(context).size.width * 0.4, // Width as per design
+        height:
+            MediaQuery.of(context).size.height * 0.06, // Height as per design
+
+        decoration: BoxDecoration(
+            borderRadius:
+                BorderRadius.circular(8.0), // BorderRadius as per design
+            border: Border.all(
+              color: Color(0xFF000000), // Border color (black)
+              width: 1.0, // Border width as per design
+            ),
+            color: color
+            //
+            //Color.fromRGBO(46, 51, 135,
+            //     1)
+            ), // Background color as per design (rgba(255, 255, 255, 1))
+
+        child: Center(
+          child: Text(
+            text1,
+            textAlign: TextAlign.left,
+            style: TextStyle(
+              color: color1,
+              fontFamily: 'Inter', // Font family as per design
+              fontSize: 16.0, // Font size as per design
+              fontWeight: FontWeight.w600,
+              height: 1.1875, // Font weight as per design
+              // Line height as per design
+              letterSpacing: 0.0, // Letter spacing as per design
+              // Text alignment as per design
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
