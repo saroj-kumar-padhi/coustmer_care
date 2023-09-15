@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/get_core.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:hello/15.dart';
 
 class RideRequest extends StatelessWidget {
   const RideRequest({Key? key}) : super(key: key);
@@ -245,7 +248,11 @@ class RideRequest extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Get.to(()=>
+                BookingHistoryReshudle()
+                );
+              },
               child: Text(
                 'On the way',
                 style: TextStyle(color: Colors.white),

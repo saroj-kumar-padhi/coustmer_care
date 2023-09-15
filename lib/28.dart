@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/get_core.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:hello/30.dart';
 
 class TwoEight extends StatelessWidget {
   const TwoEight({super.key});
@@ -244,7 +247,9 @@ class TwoEight extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(()=>ThreeZero());
+                    },
                     child: Text(
                       'Next',
                       style: TextStyle(color: Colors.white),

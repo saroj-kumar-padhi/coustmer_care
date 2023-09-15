@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:hello/17.dart';
 
 class RideReached extends StatelessWidget {
   const RideReached({Key? key}) : super(key: key);
@@ -245,7 +248,11 @@ class RideReached extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Get.to(()=>
+                BookingHistoryReached()
+                );
+              },
               child: Text(
                 'Reached your place',
                 style: TextStyle(color: Colors.white),

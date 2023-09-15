@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:hello/28.dart';
 
 class RideProceed extends StatelessWidget {
   const RideProceed({Key? key}) : super(key: key);
@@ -285,7 +288,10 @@ class RideProceed extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Get.to(()=>TwoEight()
+                );
+              },
               child: Text(
                 'Reached your place',
                 style: TextStyle(color: Colors.white),

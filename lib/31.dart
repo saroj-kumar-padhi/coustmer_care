@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/get_core.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:hello/32.dart';
 
 class ConfirmAprroval extends StatelessWidget {
   const ConfirmAprroval({Key? key}) : super(key: key);
@@ -277,7 +280,11 @@ class ConfirmAprroval extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Get.to(()=>
+                ThreeTwo()
+                );
+              },
               child: Text(
                 'Confirm > >',
                 style: TextStyle(color: Colors.white),

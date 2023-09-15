@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/get_core.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:hello/31.dart';
 
 class ThreeZero extends StatelessWidget {
   const ThreeZero({super.key});
@@ -477,7 +480,9 @@ class ThreeZero extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(()=>ConfirmAprroval());
+                    },
                     child: Text(
                       'Next',
                       style: TextStyle(color: Colors.white),
