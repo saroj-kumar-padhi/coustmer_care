@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
+import 'package:hello/4.dart';
 import 'package:hello/catagories.dart';
 import 'package:hello/customize_form_field.dart';
 
@@ -144,7 +145,7 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
             InkWell(
               onTap: () {
-                Get.to(() => CatagoriesPage());
+                Get.to(() => Four());
                 //home page to be navigate
                 //caterious
               },
