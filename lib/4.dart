@@ -17,16 +17,16 @@ class _FourState extends State<Four> {
   int _currentIndex = 0;
 
   final List<String> imagePaths = [
-    'assets/Laptop.png',
-    'assets/Fan.png',
-    'assets/TelevisionSimple.png',
-    'assets/HandTap.png',
+    'lib/assest/Laptop.png',
+    'lib/assest/Fan.png',
+    'lib/assest/TelevisionSimple.png',
+    'lib/assest/HandTap.png',
   ];
   final List<String> iconsPaths = [
-    'assets/home.png',
-    'assets/note.png',
-    'assets/wallet.png',
-    'assets/pp.png',
+    'lib/assest/Group 5397.png',
+    'lib/assest/Group 5398.png',
+    'lib/assest/Group 5399.png',
+    'lib/assest/Group 5396.png',
   ];
 
   @override
@@ -323,7 +323,7 @@ class _FourState extends State<Four> {
                     child: Column(
                       children: [
                         Image.asset(
-                          'assets/engineer.png',
+                          'lib/assest/Rectangle 721.png',
                           fit: BoxFit.cover,
                           height: 85,
                           width: Get.width,
@@ -386,7 +386,7 @@ class _FourState extends State<Four> {
                     child: Column(
                       children: [
                         Image.asset(
-                          'assets/engineer.png',
+                          'lib/assest/Rectangle 721.png',
                           fit: BoxFit.cover,
                           height: 85,
                           width: Get.width,
