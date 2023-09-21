@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
+import 'package:hello/5.dart';
 import 'package:hello/7-1.dart';
 import 'package:hello/catagories.dart';
 
@@ -253,7 +254,7 @@ class _FourState extends State<Four> {
                   builder: (context) {
                     return InkWell(
                       onTap: (){
-                        Get.to(()=> CatagoriesPage());
+                        Get.to(()=> Five());
                       },
                       child: Container(
                         decoration: BoxDecoration(

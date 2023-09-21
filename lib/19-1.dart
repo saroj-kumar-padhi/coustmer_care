@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_core/get_core.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:hello/19-1.dart';
 import 'package:hello/20.dart';
+import 'package:hello/booking_history.dart';
 
-class BookingHistoryWorkStarted extends StatelessWidget {
-  const BookingHistoryWorkStarted({super.key});
+class BookingHistoryWorkProgress extends StatelessWidget {
+  const BookingHistoryWorkProgress({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +58,7 @@ class BookingHistoryWorkStarted extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: (){
-                    Get.to(BookingHistoryWorkProgress());
+                    Get.to(BookingHistory1());
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width - 48,
@@ -145,7 +145,7 @@ class BookingHistoryWorkStarted extends StatelessWidget {
                                       width: 110,
                                     ),
                                     Text(
-                                      'Work Started...',
+                                      'Work Process..',
                                       textAlign: TextAlign.end,
                                       style: TextStyle(
                                           color: Color(

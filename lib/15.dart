@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:hello/16.dart';
+import 'package:hello/17.dart';
 
 class BookingHistoryReshudle extends StatelessWidget {
   const BookingHistoryReshudle({super.key});
@@ -57,7 +58,7 @@ class BookingHistoryReshudle extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: (){
-                    Get.to(()=>RideReached());
+                    Get.to(()=>BookingHistoryReached());
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width - 48,
