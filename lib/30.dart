@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_core/get_core.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:hello/30-1.dart';
 import 'package:hello/31.dart';
 
 class ThreeZero extends StatelessWidget {
@@ -481,10 +482,10 @@ class ThreeZero extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                     ),
                     onPressed: () {
-                      Get.to(()=>ConfirmAprroval());
+                      Get.to(()=>ThreeZeroOne());
                     },
                     child: Text(
-                      'Next',
+                      'Pay now',
                       style: TextStyle(color: Colors.white),
                     ),
                   ),

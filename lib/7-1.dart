@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
+import 'package:hello/setting.dart';
 
 Color themeColor = const Color.fromARGB(255, 64, 68, 143);
 Color lightBlue = const Color.fromARGB(255, 206, 240, 255);
@@ -111,6 +113,9 @@ class _SevenOneState extends State<SevenOne> {
                 );
               },
             ),
+            SizedBox(
+              height: 40,
+            ),
             Container(
               width: MediaQuery.of(context).size.width,
               height: 40,
@@ -146,13 +151,18 @@ class _SevenOneState extends State<SevenOne> {
           height: 40,
           decoration: BoxDecoration(
               color: themeColor, borderRadius: BorderRadius.circular(8)),
-          child: const Center(
-            child: Text(
-              'Next',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600),
+          child: InkWell(
+            onTap: (){
+              Get.to(()=> Settings());
+            },
+            child: const Center(
+              child: Text(
+                'Next',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600),
+              ),
             ),
           ),
         ),

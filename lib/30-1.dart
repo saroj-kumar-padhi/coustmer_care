@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello/22.dart';
+import 'package:hello/30.dart';
+import 'package:hello/32.dart';
 
-class ThreeTwo extends StatelessWidget {
-  const ThreeTwo({super.key});
+class ThreeZeroOne extends StatelessWidget {
+  const ThreeZeroOne({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -238,10 +239,10 @@ class ThreeTwo extends StatelessWidget {
                   child: Row(
                     children: [
                 
-                      Image.asset("lib/assest/done.png"),
+                      Image.asset("lib/assest/Group 5366.png"),
                       SizedBox(width: 8,),
                        Text(
-                                "Payment done",
+                                "Payment pending",
                                 style: TextStyle(
                                     fontSize: 14, fontWeight: FontWeight.w400,),
                               ),
@@ -261,7 +262,7 @@ class ThreeTwo extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                     ),
                     onPressed: () {
-                      Get.to(()=>TwentyTwo());
+                      Get.to(()=>ThreeTwo());
                     },
                     child: Text(
                       'Next',

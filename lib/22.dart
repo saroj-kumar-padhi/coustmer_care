@@ -33,7 +33,7 @@ class TwentyTwo extends StatelessWidget {
                   children: [
                     ClipOval(
                         child: Image.asset(
-                      'assets/pfp.png',
+                      'lib/assest/Subtract.png',
                       height: 70,
                       width: 70,
                       fit: BoxFit.cover,
@@ -68,7 +68,7 @@ class TwentyTwo extends StatelessWidget {
                   child: Row(
                     children: <Widget>[
                       Image.asset(
-                        'assets/pp.png',
+                        'lib/assest/profile.png',
                         color: themeColor,
                         height: 24,
                       ),
@@ -104,7 +104,7 @@ class TwentyTwo extends StatelessWidget {
                   child: Row(
                     children: <Widget>[
                       Image.asset(
-                        'assets/location.png',
+                        'lib/assest/location.png',
                         color: themeColor,
                         height: 24,
                       ),
@@ -160,21 +160,26 @@ class TwentyTwo extends StatelessWidget {
               ],
             ),
             const Gap(60),
-    Container(
-  width: 215.19,
-  height: 40,
-  decoration: BoxDecoration(
-    color: themeColor,borderRadius: BorderRadius.circular(8),
-  ),
-  child: const Center(child: Text(
-    'Log Out',
-    style: TextStyle(
-      color: Colors.white,
-      fontSize: 12,
-      fontWeight: FontWeight.w600,
+    InkWell(
+      onTap: (){
+        Get.to(()=>SevenOne());
+      },
+      child: Container(
+      width: 215.19,
+      height: 40,
+      decoration: BoxDecoration(
+      color: themeColor,borderRadius: BorderRadius.circular(8),
+      ),
+      child: const Center(child: Text(
+      'Log Out',
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 12,
+        fontWeight: FontWeight.w600,
+      ),
+      ),),
     ),
-  ),),
-)
+    )
 
           ],
         ),

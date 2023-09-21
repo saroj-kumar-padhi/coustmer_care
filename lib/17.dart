@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:hello/18.dart';
+import 'package:hello/19.dart';
 
 class BookingHistoryReached extends StatelessWidget {
   const BookingHistoryReached({super.key});
@@ -58,7 +59,7 @@ class BookingHistoryReached extends StatelessWidget {
                 InkWell(
                   onTap: (){
                     Get.to(
-                     ()=> RideProceed()
+                     ()=> BookingHistoryWorkStarted()
                     );
                   },
                   child: Container(
