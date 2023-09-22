@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
-import 'package:hello/7-1.dart';
-
+import 'package:hello/Address_22_1.dart';
 
 class TwentyTwo extends StatelessWidget {
   const TwentyTwo({Key? key}) : super(key: key);
@@ -11,7 +10,8 @@ class TwentyTwo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 15, vertical: Get.height*0.16),
+        padding:
+            EdgeInsets.symmetric(horizontal: 15, vertical: Get.height * 0.16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -73,7 +73,7 @@ class TwentyTwo extends StatelessWidget {
                         height: 24,
                       ),
                       const Gap(10),
-                       Text(
+                      Text(
                         'My Profile',
                         style: TextStyle(
                           color: themeColor,
@@ -109,10 +109,10 @@ class TwentyTwo extends StatelessWidget {
                         height: 24,
                       ),
                       const Gap(10),
-                       Text(
+                      Text(
                         'My Address',
                         style: TextStyle(
-                      color: themeColor,
+                          color: themeColor,
                           fontSize: 14,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w500,
@@ -140,15 +140,15 @@ class TwentyTwo extends StatelessWidget {
                   child: Row(
                     children: <Widget>[
                       Icon(
-                      Icons.settings,
+                        Icons.settings,
                         color: themeColor,
                         size: 24,
                       ),
                       const Gap(10),
-                       Text(
+                      Text(
                         'Settings',
                         style: TextStyle(
-                      color: themeColor,
+                          color: themeColor,
                           fontSize: 14,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w500,
@@ -160,27 +160,29 @@ class TwentyTwo extends StatelessWidget {
               ],
             ),
             const Gap(60),
-    InkWell(
-      onTap: (){
-        Get.to(()=>SevenOne());
-      },
-      child: Container(
-      width: 215.19,
-      height: 40,
-      decoration: BoxDecoration(
-      color: themeColor,borderRadius: BorderRadius.circular(8),
-      ),
-      child: const Center(child: Text(
-      'Log Out',
-      style: TextStyle(
-        color: Colors.white,
-        fontSize: 12,
-        fontWeight: FontWeight.w600,
-      ),
-      ),),
-    ),
-    )
-
+            InkWell(
+              onTap: () {
+                Get.to(() => SevenOne());
+              },
+              child: Container(
+                width: 215.19,
+                height: 40,
+                decoration: BoxDecoration(
+                  color: themeColor,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Center(
+                  child: Text(
+                    'Log Out',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),

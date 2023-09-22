@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/get_navigation.dart';
-import 'package:hello/16.dart';
-import 'package:hello/17.dart';
+import 'package:hello/Payments.dart';
+import 'package:hello/21_Booking.dart';
 
-class BookingHistoryReshudle extends StatelessWidget {
-  const BookingHistoryReshudle({super.key});
+class ThreeZeroOne extends StatelessWidget {
+  const ThreeZeroOne({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -57,9 +56,7 @@ class BookingHistoryReshudle extends StatelessWidget {
                   height: 15,
                 ),
                 InkWell(
-                  onTap: () {
-                    Get.to(() => BookingHistoryReached());
-                  },
+                  onTap: () => Get.to(() => ThreeTwo()),
                   child: Container(
                     width: MediaQuery.of(context).size.width - 48,
                     decoration: BoxDecoration(
@@ -142,9 +139,9 @@ class BookingHistoryReshudle extends StatelessWidget {
                                             fontSize: 12),
                                       ),
                                     ),
-                                    SizedBox(
-                                      width: 110,
-                                    ),
+                                    // SizedBox(
+                                    //   width: 110,
+                                    // ),
                                     // Text(
                                     //   'On the way...',
                                     //   textAlign: TextAlign.end,
@@ -191,58 +188,92 @@ class BookingHistoryReshudle extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 0, 20, 20),
-                          child: Align(
-                              alignment: Alignment.centerRight,
-                              child: Image(
-                                  image:
-                                      AssetImage("lib/assest/Frame 21.png"))),
-                        )
+                        Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: Text(
+                                "Visiting Cost",
+                                style: TextStyle(
+                                    fontSize: 12, fontWeight: FontWeight.w400),
+                              ),
+                            ),
+                            Spacer(),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 10),
+                              child: Text(
+                                "₹250",
+                                style: TextStyle(
+                                    fontSize: 12, fontWeight: FontWeight.w400),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                              child: Text(
+                                "Total ",
+                                style: TextStyle(
+                                    fontSize: 12, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Spacer(),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 10),
+                              child: Text(
+                                "₹250",
+                                style: TextStyle(
+                                    fontSize: 12, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ),
                 ),
+
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
+                  child: Row(
+                    children: [
+                      Image.asset("lib/assest/Group 5366.png"),
+                      SizedBox(
+                        width: 8,
+                      ),
+                      Text(
+                        "Payment pending",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                //   Spacer(),
+
+                //    Padding(
+                //   padding: const EdgeInsets.only(bottom: 30),
+                //   child: MaterialButton(
+                //     height: 40,
+                //     color: Color.fromARGB(255, 4, 6, 147),
+                //     minWidth: 300,
+                //     shape: RoundedRectangleBorder(
+                //       borderRadius: BorderRadius.circular(8),
+                //     ),
+                //     onPressed: () {
+                //       Get.to(()=>ThreeTwo());
+                //     },
+                //     child: Text(
+                //       'Next',
+                //       style: TextStyle(color: Colors.white),
+                //     ),
+                //   ),
+                // )
               ],
-            ),
-          ],
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          onTap: (int index) {
-            // Handle item tap here
-          },
-          items: const [
-            BottomNavigationBarItem(
-              icon: Image(
-                image: AssetImage('lib/assest/Group 5397.png'),
-                height: 20,
-                width: 20,
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Image(
-                image: AssetImage('lib/assest/Group 5398.png'),
-                height: 20,
-                width: 20,
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Image(
-                image: AssetImage('lib/assest/Group 5399.png'),
-                height: 20,
-                width: 20,
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Image(
-                image: AssetImage('lib/assest/Group 5396.png'),
-                height: 20,
-                width: 20,
-              ),
-              label: '',
             ),
           ],
         ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_core/get_core.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:hello/30.dart';
+import 'package:hello/Payments.dart';
 
 class TwoEight extends StatelessWidget {
   const TwoEight({super.key});
@@ -139,16 +139,16 @@ class TwoEight extends StatelessWidget {
                                   SizedBox(
                                     width: 110,
                                   ),
-                                  Text(
-                                    'On the way...',
-                                    textAlign: TextAlign.end,
-                                    style: TextStyle(
-                                        color: Color(
-                                          0xff2e3387,
-                                        ),
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 12),
-                                  ),
+                                  // Text(
+                                  //   'On the way...',
+                                  //   textAlign: TextAlign.end,
+                                  //   style: TextStyle(
+                                  //       color: Color(
+                                  //         0xff2e3387,
+                                  //       ),
+                                  //       fontWeight: FontWeight.w600,
+                                  //       fontSize: 12),
+                                  // ),
                                 ],
                               ),
                             ],
@@ -185,7 +185,7 @@ class TwoEight extends StatelessWidget {
                           ],
                         ),
                       ),
-                        Row(
+                      Row(
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 10),
@@ -225,20 +225,13 @@ class TwoEight extends StatelessWidget {
                                   fontSize: 12, fontWeight: FontWeight.bold),
                             ),
                           ),
-
-                          
                         ],
                       ),
-
-                      
-   
-             
                     ],
                   ),
                 ),
-                  Spacer(),
-
-                   Padding(
+                Spacer(),
+                Padding(
                   padding: const EdgeInsets.only(bottom: 30),
                   child: MaterialButton(
                     height: 40,
@@ -248,7 +241,7 @@ class TwoEight extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                     ),
                     onPressed: () {
-                      Get.to(()=>ThreeZero());
+                      Get.to(() => ThreeZero());
                     },
                     child: Text(
                       'Next',
@@ -260,16 +253,7 @@ class TwoEight extends StatelessWidget {
             ),
           ],
         ),
-      
       ),
     );
   }
 }
-
-
-
-
-
-
-
-       
