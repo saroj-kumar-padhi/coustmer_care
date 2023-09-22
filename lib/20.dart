@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:hello/22.dart';
+import 'package:hello/22_profile.dart';
 import 'package:hello/23.dart';
 
 class Twenty extends StatelessWidget {
@@ -29,7 +29,8 @@ class Twenty extends StatelessWidget {
               Image.asset("lib/assest/Ellipse 1.png"),
               IconButton(
                 onPressed: () {},
-                icon: const Image(image: AssetImage("lib/assest/Group 5284.png")),
+                icon:
+                    const Image(image: AssetImage("lib/assest/Group 5284.png")),
               ),
             ],
           ),
@@ -54,7 +55,8 @@ class Twenty extends StatelessWidget {
                   child: Stack(
                     children: [
                       Image.asset("lib/assest/Rectangle 2.jpg", height: 17.61),
-                      Image.asset("lib/assest/Rectangle 653.jpg", height: 17.61),
+                      Image.asset("lib/assest/Rectangle 653.jpg",
+                          height: 17.61),
                     ],
                   ),
                 ),
@@ -227,9 +229,7 @@ class Twenty extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   onPressed: () {
-                    Get.to(()=>
-                    BottomSheet23()
-                    );
+                    Get.to(() => BottomSheet23());
                   },
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,

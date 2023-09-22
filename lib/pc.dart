@@ -66,45 +66,40 @@ class PcPage extends StatelessWidget {
                             1) // You can adjust the weight as needed
                         ),
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      _showBottomSheet(context);
-                    },
-                    child: Container(
-                      width: 85.0, // Width as per design
-                      height: 20.0, // Height as per design
+                  Container(
+                    width: 85.0, // Width as per design
+                    height: 20.0, // Height as per design
 
-                      decoration: BoxDecoration(
-                        color: const Color.fromRGBO(
-                          206,
-                          240,
-                          255,
-                          1,
+                    decoration: BoxDecoration(
+                      color: const Color.fromRGBO(
+                        206,
+                        240,
+                        255,
+                        1,
+                      ),
+                      borderRadius: BorderRadius.circular(
+                          4.0), // BorderRadius as per design
+                      border: Border.all(
+                        // Border color (black)
+                        width: 1.0, // Border width as per design
+                      ),
+                    ), // Background color as per design (rgba(46, 51, 135, 1))
+                    child: const Center(
+                      child: Text(
+                        'Rate card', // Replace with your desired text
+                        style: TextStyle(
+                          fontFamily: 'Inter', // Font family as per design
+                          fontSize: 11.0, // Font size as per design
+                          fontWeight:
+                              FontWeight.w400, // Font weight as per design
+                          height:
+                              1.18, // Line height as per design (13px / 11px)
+                          letterSpacing: 0.0, // Letter spacing as per design
+                          color: Color.fromRGBO(46, 51, 135, 1),
+                          // Text color
                         ),
-                        borderRadius: BorderRadius.circular(
-                            4.0), // BorderRadius as per design
-                        border: Border.all(
-                          // Border color (black)
-                          width: 1.0, // Border width as per design
-                        ),
-                      ), // Background color as per design (rgba(46, 51, 135, 1))
-                      child: const Center(
-                        child: Text(
-                          'Rate card', // Replace with your desired text
-                          style: TextStyle(
-                            fontFamily: 'Inter', // Font family as per design
-                            fontSize: 11.0, // Font size as per design
-                            fontWeight:
-                                FontWeight.w400, // Font weight as per design
-                            height:
-                                1.18, // Line height as per design (13px / 11px)
-                            letterSpacing: 0.0, // Letter spacing as per design
-                            color: Color.fromRGBO(46, 51, 135, 1),
-                            // Text color
-                          ),
-                          textAlign:
-                              TextAlign.left, // Text alignment as per design
-                        ),
+                        textAlign:
+                            TextAlign.left, // Text alignment as per design
                       ),
                     ),
                   ),
@@ -497,7 +492,7 @@ class PcPage extends StatelessWidget {
               padding: const EdgeInsets.only(left: 10, right: 19, bottom: 8),
               child: InkWell(
                   onTap: () {
-                    Get.to(Seven());
+                    _showBottomSheet(context);
                   },
                   child: CustomButton(text1: 'Next')),
             ),

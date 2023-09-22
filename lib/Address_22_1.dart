@@ -152,12 +152,12 @@ class _SevenOneState extends State<SevenOne> {
           decoration: BoxDecoration(
               color: themeColor, borderRadius: BorderRadius.circular(8)),
           child: InkWell(
-            onTap: (){
-              Get.to(()=> Settings());
+            onTap: () {
+              Get.to(() => Settings());
             },
             child: const Center(
               child: Text(
-                'Next',
+                'Delete',
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 14,

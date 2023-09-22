@@ -3,9 +3,8 @@ import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:hello/5.dart';
-import 'package:hello/7-1.dart';
+import 'package:hello/Address_22_1.dart';
 import 'package:hello/catagories.dart';
-
 
 class Four extends StatefulWidget {
   const Four({super.key});
@@ -133,7 +132,8 @@ class _FourState extends State<Four> {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Image.asset('lib/assest/Group 5394.png', color: themeColor),
+                  child: Image.asset('lib/assest/Group 5394.png',
+                      color: themeColor),
                 )
               ],
             ),
@@ -253,8 +253,8 @@ class _FourState extends State<Four> {
                 return Builder(
                   builder: (context) {
                     return InkWell(
-                      onTap: (){
-                        Get.to(()=> Five());
+                      onTap: () {
+                        Get.to(() => Five());
                       },
                       child: Container(
                         decoration: BoxDecoration(
@@ -301,9 +301,8 @@ class _FourState extends State<Four> {
                 )
               ],
             ),
-
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-             Flexible(
+              Flexible(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20),
                   child: Container(
@@ -435,16 +434,20 @@ class _FourState extends State<Four> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: iconsPaths.map((e){
-           
-      return  Card(
-        shape: const CircleBorder(),
-        child:   CircleAvatar(
-          backgroundColor: e=='assets/home.png'?themeColor: Colors.white,
-          child: Image.asset(e,height: 30,),
-        ),
-      );
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: iconsPaths.map((e) {
+            return Card(
+              shape: const CircleBorder(),
+              child: CircleAvatar(
+                backgroundColor:
+                    e == 'assets/home.png' ? themeColor : Colors.white,
+                child: Image.asset(
+                  e,
+                  height: 30,
+                ),
+              ),
+            );
           }).toList(),
         ),
       ),

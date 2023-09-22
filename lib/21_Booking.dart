@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello/30.dart';
-import 'package:hello/32.dart';
+import 'package:hello/22_profile.dart';
 
-class ThreeZeroOne extends StatelessWidget {
-  const ThreeZeroOne({super.key});
+class ThreeTwo extends StatelessWidget {
+  const ThreeTwo({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -136,19 +135,19 @@ class ThreeZeroOne extends StatelessWidget {
                                           fontSize: 12),
                                     ),
                                   ),
-                                  SizedBox(
-                                    width: 110,
-                                  ),
-                                  Text(
-                                    'On the way...',
-                                    textAlign: TextAlign.end,
-                                    style: TextStyle(
-                                        color: Color(
-                                          0xff2e3387,
-                                        ),
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 12),
-                                  ),
+                                  // SizedBox(
+                                  //   width: 110,
+                                  // ),
+                                  // Text(
+                                  //   'On the way...',
+                                  //   textAlign: TextAlign.end,
+                                  //   style: TextStyle(
+                                  //       color: Color(
+                                  //         0xff2e3387,
+                                  //       ),
+                                  //       fontWeight: FontWeight.w600,
+                                  //       fontSize: 12),
+                                  // ),
                                 ],
                               ),
                             ],
@@ -185,7 +184,7 @@ class ThreeZeroOne extends StatelessWidget {
                           ],
                         ),
                       ),
-                        Row(
+                      Row(
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 10),
@@ -225,34 +224,31 @@ class ThreeZeroOne extends StatelessWidget {
                                   fontSize: 12, fontWeight: FontWeight.bold),
                             ),
                           ),
-
-                          
                         ],
                       ),
-             
                     ],
                   ),
                 ),
-
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(20,20,0,0),
+                  padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
                   child: Row(
                     children: [
-                
-                      Image.asset("lib/assest/Group 5366.png"),
-                      SizedBox(width: 8,),
-                       Text(
-                                "Payment pending",
-                                style: TextStyle(
-                                    fontSize: 14, fontWeight: FontWeight.w400,),
-                              ),
-                
+                      Image.asset("lib/assest/done.png"),
+                      SizedBox(
+                        width: 8,
+                      ),
+                      Text(
+                        "Payment done",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
                     ],
                   ),
                 ),
-                  Spacer(),
-
-                   Padding(
+                Spacer(),
+                Padding(
                   padding: const EdgeInsets.only(bottom: 30),
                   child: MaterialButton(
                     height: 40,
@@ -262,10 +258,10 @@ class ThreeZeroOne extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                     ),
                     onPressed: () {
-                      Get.to(()=>ThreeTwo());
+                      Get.to(() => TwentyTwo());
                     },
                     child: Text(
-                      'Next',
+                      'Paid',
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
@@ -274,16 +270,7 @@ class ThreeZeroOne extends StatelessWidget {
             ),
           ],
         ),
-      
       ),
     );
   }
 }
-
-
-
-
-
-
-
-       

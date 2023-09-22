@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/get_navigation.dart';
-import 'package:hello/16.dart';
-import 'package:hello/17.dart';
+import 'package:hello/16_1_bookings.dart';
+import 'package:hello/customize_form_field.dart';
+import 'package:hello/widgets/text.dart';
 
-class BookingHistoryReshudle extends StatelessWidget {
-  const BookingHistoryReshudle({super.key});
+class BookingHistory16 extends StatelessWidget {
+  const BookingHistory16({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -58,10 +58,11 @@ class BookingHistoryReshudle extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    Get.to(() => BookingHistoryReached());
+                    // Get.to(Bookings161());
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width - 48,
+                    height: MediaQuery.of(context).size.height * 0.43,
                     decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow(
@@ -145,24 +146,14 @@ class BookingHistoryReshudle extends StatelessWidget {
                                     SizedBox(
                                       width: 110,
                                     ),
-                                    // Text(
-                                    //   'On the way...',
-                                    //   textAlign: TextAlign.end,
-                                    //   style: TextStyle(
-                                    //       color: Color(
-                                    //         0xff2e3387,
-                                    //       ),
-                                    //       fontWeight: FontWeight.w600,
-                                    //       fontSize: 12),
-                                    // ),
                                   ],
                                 ),
                               ],
                             )
                           ],
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 10),
                           child: Image(
                               image: AssetImage("lib/assest/Vector 198.png")),
                         ),
@@ -170,8 +161,8 @@ class BookingHistoryReshudle extends StatelessWidget {
                           alignment: Alignment.centerLeft,
                           child: Row(
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 10),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 10),
                                 child: Align(
                                     alignment: Alignment.centerLeft,
                                     child: Text(
@@ -181,68 +172,134 @@ class BookingHistoryReshudle extends StatelessWidget {
                                           fontWeight: FontWeight.w400),
                                     )),
                               ),
-                              Spacer(),
+                              const Spacer(),
                               IconButton(
                                   onPressed: () {},
                                   icon: Image.asset("lib/assest/message.png")),
                               IconButton(
                                   onPressed: () {},
-                                  icon: Image.asset("lib/assest/mobile.png")),
+                                  icon: Image.asset("lib/assest/call.png")),
                             ],
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 0, 20, 20),
-                          child: Align(
-                              alignment: Alignment.centerRight,
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.004,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 10),
+                          child: Row(
+                            children: [
+                              Text(
+                                'Estimate Cost',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w400, fontSize: 12),
+                              ),
+                              Text(
+                                '₹339',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 12),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.006,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 10),
+                          child: Text(
+                            'Workshop Repair',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400, fontSize: 12),
+                          ),
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.013,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 10),
+                          child: Text(
+                            'Workshop Details',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 12),
+                          ),
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.004,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 10),
+                          child: Text(
+                            'Mahol Street 67, nae GB Road, Royal star shop',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400, fontSize: 12),
+                          ),
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.009,
+                        ),
+                        const Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(left: 8, right: 10),
                               child: Image(
-                                  image:
-                                      AssetImage("lib/assest/Frame 21.png"))),
+                                image:
+                                    AssetImage('lib/assest/Rectangle 707.jpg'),
+                                height: 85,
+                                width: 65,
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 8, right: 10),
+                              child: Image(
+                                image:
+                                    AssetImage('lib/assest/Rectangle 707.jpg'),
+                                height: 85,
+                                width: 65,
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 8, right: 10),
+                              child: Image(
+                                image:
+                                    AssetImage('lib/assest/Rectangle 707.jpg'),
+                                height: 85,
+                                width: 65,
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 8, right: 10),
+                              child: Image(
+                                image:
+                                    AssetImage('lib/assest/Rectangle 707.jpg'),
+                                height: 85,
+                                width: 65,
+                              ),
+                            ),
+                          ],
                         )
                       ],
                     ),
                   ),
                 ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.23,
+                ),
+                TextWidget(
+                    fontSizeInDP: 16,
+                    color: Colors.black,
+                    text: 'Reject',
+                    fontWeight: FontWeight.bold),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 25, right: 25, bottom: 10),
+                  child: InkWell(
+                      onTap: () => Get.to(Bookings161()),
+                      child: CustomButton(text1: 'Approve')),
+                )
               ],
-            ),
-          ],
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          onTap: (int index) {
-            // Handle item tap here
-          },
-          items: const [
-            BottomNavigationBarItem(
-              icon: Image(
-                image: AssetImage('lib/assest/Group 5397.png'),
-                height: 20,
-                width: 20,
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Image(
-                image: AssetImage('lib/assest/Group 5398.png'),
-                height: 20,
-                width: 20,
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Image(
-                image: AssetImage('lib/assest/Group 5399.png'),
-                height: 20,
-                width: 20,
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Image(
-                image: AssetImage('lib/assest/Group 5396.png'),
-                height: 20,
-                width: 20,
-              ),
-              label: '',
             ),
           ],
         ),
