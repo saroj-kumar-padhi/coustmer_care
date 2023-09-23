@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+
 import 'package:hello/booking_history17.dart';
 import 'package:hello/booking_his19.dart';
 import 'package:hello/profile24.dart';
 import 'package:hello/splash.dart';
 
 
+
+
+import 'package:hello/16_bookings.dart';
+import 'package:hello/setting.dart';
+import 'package:hello/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,10 +22,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Splash(),
-    );
+    return GetMaterialApp(debugShowCheckedModeBanner: false, home: Settings()
+        //  Splash(),
+        );
   }
 }
 

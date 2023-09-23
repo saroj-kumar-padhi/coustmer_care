@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:get/get_core/get_core.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:hello/16.dart';
-import 'package:hello/17.dart';
+import 'package:hello/17_booking.dart';
+import 'package:hello/20.dart';
+import 'package:hello/booking_history.dart';
 
-class BookingHistoryReshudle extends StatelessWidget {
-  const BookingHistoryReshudle({super.key});
+class BookingHistory162 extends StatelessWidget {
+  const BookingHistory162({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +59,7 @@ class BookingHistoryReshudle extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    Get.to(() => BookingHistoryReached());
+                    Get.to(BookingPayNow17());
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width - 48,
@@ -145,24 +146,24 @@ class BookingHistoryReshudle extends StatelessWidget {
                                     SizedBox(
                                       width: 110,
                                     ),
-                                    // Text(
-                                    //   'On the way...',
-                                    //   textAlign: TextAlign.end,
-                                    //   style: TextStyle(
-                                    //       color: Color(
-                                    //         0xff2e3387,
-                                    //       ),
-                                    //       fontWeight: FontWeight.w600,
-                                    //       fontSize: 12),
-                                    // ),
+                                    Text(
+                                      'Work Process..',
+                                      textAlign: TextAlign.end,
+                                      style: TextStyle(
+                                          color: Color(
+                                            0xff2e3387,
+                                          ),
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 12),
+                                    ),
                                   ],
                                 ),
                               ],
                             )
                           ],
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 10),
                           child: Image(
                               image: AssetImage("lib/assest/Vector 198.png")),
                         ),
@@ -170,8 +171,8 @@ class BookingHistoryReshudle extends StatelessWidget {
                           alignment: Alignment.centerLeft,
                           child: Row(
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 10),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 10),
                                 child: Align(
                                     alignment: Alignment.centerLeft,
                                     child: Text(
@@ -181,7 +182,7 @@ class BookingHistoryReshudle extends StatelessWidget {
                                           fontWeight: FontWeight.w400),
                                     )),
                               ),
-                              Spacer(),
+                              const Spacer(),
                               IconButton(
                                   onPressed: () {},
                                   icon: Image.asset("lib/assest/message.png")),
@@ -190,14 +191,6 @@ class BookingHistoryReshudle extends StatelessWidget {
                                   icon: Image.asset("lib/assest/mobile.png")),
                             ],
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 0, 20, 20),
-                          child: Align(
-                              alignment: Alignment.centerRight,
-                              child: Image(
-                                  image:
-                                      AssetImage("lib/assest/Frame 21.png"))),
                         )
                       ],
                     ),
@@ -215,32 +208,32 @@ class BookingHistoryReshudle extends StatelessWidget {
             BottomNavigationBarItem(
               icon: Image(
                 image: AssetImage('lib/assest/Group 5397.png'),
-                height: 20,
-                width: 20,
+                height: 30,
+                width: 30,
               ),
               label: '',
             ),
             BottomNavigationBarItem(
               icon: Image(
                 image: AssetImage('lib/assest/Group 5398.png'),
-                height: 20,
-                width: 20,
+                height: 30,
+                width: 30,
               ),
               label: '',
             ),
             BottomNavigationBarItem(
               icon: Image(
                 image: AssetImage('lib/assest/Group 5399.png'),
-                height: 20,
-                width: 20,
+                height: 33,
+                width: 33,
               ),
               label: '',
             ),
             BottomNavigationBarItem(
               icon: Image(
                 image: AssetImage('lib/assest/Group 5396.png'),
-                height: 20,
-                width: 20,
+                height: 32,
+                width: 32,
               ),
               label: '',
             ),
