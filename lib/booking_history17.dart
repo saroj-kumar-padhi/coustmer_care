@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello/19-1.dart';
 import 'package:hello/30.dart';
-
 import 'package:hello/bottomsheet_26_27.dart';
 import 'package:hello/customize_form_field.dart';
 import 'package:hello/widgets/request_tab_bar.dart';
 import 'package:hello/widgets/text.dart';
 
-class BookingHistory1 extends StatelessWidget {
+class BookingHistoryLong17 extends StatelessWidget {
   double fontSizeInDP = 16.0;
-  BookingHistory1({super.key});
+  BookingHistoryLong17({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +47,7 @@ class BookingHistory1 extends StatelessWidget {
           ),
           Container(
             width: MediaQuery.of(context).size.width * 0.9,
-            height: MediaQuery.of(context).size.height * 0.51,
+            height: MediaQuery.of(context).size.height * 0.91,
             decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
@@ -110,7 +109,7 @@ class BookingHistory1 extends StatelessWidget {
                     ),
                     child: Image.asset(
                       'lib/assest/Rectangle 707.jpg',
-                      height: MediaQuery.of(context).size.height * 0.15,
+                      height: MediaQuery.of(context).size.height * 0.1,
                       width: MediaQuery.of(context).size.width * 0.27,
                     ),
                   ),
@@ -149,7 +148,7 @@ class BookingHistory1 extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
+                height: MediaQuery.of(context).size.height * 0.01,
               ),
               Padding(
                 padding: const EdgeInsets.only(
@@ -319,7 +318,7 @@ class BookingHistory1 extends StatelessWidget {
                         ]),
                   ),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.03,
+                    height: MediaQuery.of(context).size.height * 0.02,
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 30, right: 30),
@@ -377,28 +376,142 @@ class BookingHistory1 extends StatelessWidget {
                             ),
                           ),
                         ]),
-                  )
+                  ),
+                       Row(
+          children: [
+            Radio(
+  value: "radio value", 
+  groupValue: "group value", 
+  onChanged: (value){
+    print(value); 
+ //selected value
+  }
+),
+Text("Workshop Repair",style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400),)
+          ],
+        ),
+
+        Padding(
+          padding: const EdgeInsets.only(left: 50),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Text("Workshop Details",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),)),
+        ),
+
+       
+
+         Padding(
+          padding: const EdgeInsets.only(left: 50),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Text("Mahol Street 67, nae GB Road, Royal star shop",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400),)),
+        ),
+
+        SizedBox(height: 10,),
+
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Row(
+            children: [
+              
+              Image.asset("lib/assest/Rectangle 707.jpg",height: 53,width: 60,),
+              SizedBox(width: 10,),
+              Image.asset("lib/assest/Rectangle 707.jpg",height: 53,width: 60,),
+               SizedBox(width: 10,),
+              Image.asset("lib/assest/Rectangle 707.jpg",height: 53,width: 60,),
+              SizedBox(width: 10,),
+              Image.asset("lib/assest/Rectangle 707.jpg",height: 53,width: 60,),
+
+            ],
+          ),
+        ),
+
+                        Row(
+          children: [
+            Radio(
+  value: "radio value", 
+  groupValue: "group value", 
+  onChanged: (value){
+    print(value); 
+ //selected value
+  }
+),
+Text("Service Proof Details",style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400),)
+          ],
+        ),
+
+       
+
+        Padding(
+          padding: const EdgeInsets.only(left: 50),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Text("Product Description/Remark",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),)),
+        ),
+
+         Padding(
+          padding: const EdgeInsets.only(left: 50),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Text("Brand-Dell, Model-5020",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400),)),
+        ),
+
+
+
+       
+
+         Padding(
+          padding: const EdgeInsets.only(left: 50),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Text("CPU-I5, Ram-8gb, SSD-256GB, HDD-500Gb",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400),)),
+        ),
+
+        SizedBox(height: 10,),
+
+         Padding(
+          padding: const EdgeInsets.only(left: 20),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Row(
+              children: [
+                Image.asset("lib/assest/infocircleout.png"),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8),
+                  child: Text("1 Dot found in Display and 1 screw missing",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400,color: Color.fromRGBO(231, 103, 103, 1)),),
+                )
+              ],
+            ))),
+
+             Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+          child: Row(
+            children: [
+              
+              Image.asset("lib/assest/Rectangle 707.jpg",height: 53,width: 60,),
+              SizedBox(width: 10,),
+              Image.asset("lib/assest/Rectangle 707.jpg",height: 53,width: 60,),
+               SizedBox(width: 10,),
+              Image.asset("lib/assest/Rectangle 707.jpg",height: 53,width: 60,),
+              SizedBox(width: 10,),
+              Image.asset("lib/assest/Rectangle 707.jpg",height: 53,width: 60,),
+
+            ],
+          ),
+        ),
+        
+
+        
+        
+
+
                 ],
               ),
             ]),
           ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.13,
-          ),
-          TextWidget(
-              fontSizeInDP: 16,
-              color: Colors.black,
-              text: 'Reject',
-              fontWeight: FontWeight.bold),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.02,
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 25, right: 25, bottom: 10),
-            child: InkWell(
-                onTap: () => Get.to(ThreeZero()),
-                child: CustomButton(text1: 'Approve')),
-          )
+        
+   
+       
         ])));
   }
 }
